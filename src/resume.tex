@@ -1,6 +1,6 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template
+% Awesome CV LaTeX Template for CV/Resume
 %
 % This template has been downloaded from:
 % https://github.com/posquit0/Awesome-CV
@@ -14,60 +14,92 @@
 %
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Configuration
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Themes: Awesome-CV
-\documentclass[]{awesome-cv}
-\usepackage{textcomp}
-%%% Override a directory location for fonts(default: 'fonts/')
-\fontdir[fonts/]
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
 
-%%% Configure a directory location for sections
-\newcommand*{\sectiondir}{resume/}
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-%%% Override color
+% Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-%% Color for highlight
-% Define your custom color if you don't like awesome colors
-\colorlet{awesome}{awesome-red}
-%\definecolor{awesome}{HTML}{CA63A8}
-%% Colors for text
-%\definecolor{darktext}{HTML}{414141}
-%\definecolor{text}{HTML}{414141}
-%\definecolor{graytext}{HTML}{414141}
-%\definecolor{lighttext}{HTML}{414141}
+\colorlet{awesome}{awesome-skyblue}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{3E6D9C}
 
-%%% Override a separator for social informations in header(default: ' | ')
-%\headersocialsep[\quad\textbar\quad]
-    \begin{document}
-    
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Profile
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{center}
-	\headerfirstnamestyle{Eric} \headerlastnamestyle{Wells} \\
-	\vspace{2mm}
-	{\faEnvelope\ ericwellsrobotics@gmail.com} | {\faMobile\ 7807161344} | {\faLink\ www.ericdavidwells.com}
-\end{center}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Education
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cvsection{Education}
-\begin{cventries}
-	\cventry
-	{MSc. in Mechanical Engineering}
-	{University of Alberta}
-	{Edmonton, AB}
-	{2018 – 2021}
-	{GPA: 4.0}
-\end{cventries}
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
 
-\vspace{-2mm}
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Eric}{Wells}
+\position{ Robotics Engineer }
+\email{ericwellsrobotics@gmail.com}
+\homepage{www.ericdavidwells.com}
+\github{ericdavidwells}
+\linkedin{ericdavidwells}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+% \quote{``Be the change that you want to see in the world."}
 
 
-\ 
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Eric Wells ~~~·~~~Résumé}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/summary.tex}
+\input{resume/education.tex}
+\input{resume/honors.tex}
+\input{resume/experience.tex}
+\input{resume/projects.tex}
+\input{resume/computer_skills.tex}
+\input{resume/publications.tex}
+\input{resume/volunteering.tex}
+% \input{resume/extracurricular.tex}
+%-------------------------------------------------------------------------------
 \end{document}

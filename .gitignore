@@ -1,1 +1,7 @@
 **/build
+**.aux
+**.out
+**.log
+**awesome-cv.cls
+**.fdb_latexmk
+**.fls
