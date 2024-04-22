@@ -1,0 +1,110 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for Cover Letter
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Authors:
+% Claud D. Park <posquit0.bj@gmail.com>
+% Lars Richter <mail@ayeks.de>
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+\colorlet{awesome}{awesome-skyblue}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+\input{info.tex}
+
+%-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {Recruitment Team}
+  {Figure AI\\Sunnyvale, CA}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Job Application for Teleop Software Engineer}
+% How the letter is opened
+\letteropening{Dear Recruitment Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+\lettersection{About Me}
+
+I am a passionate robotics engineer with a strong foundation in mechatronics. 
+My background in mechanical engineering is enriched with skills in software, controls, and networking, gained through both academic study and professional experience. 
+I am committed to further developing my technical expertise to emerge as a leader in the robotics field.
+\\\\Over the past three years at Sanctuary AI, I have implemented teleoperation techniques for three generations of humanoid robots. 
+As the initial member of the teleoperation team, I played a key role in its growth and the evolution of our software stack.
+My experience in operating humanoid robots has provided me with valuable insights into optimizing hardware capabilities.
+
+\lettersection{Why Figure AI?}
+Figure AI has consistently demonstrated technical leadership in robotics, showcasing impressive autonomous behavior that has attracted significant funding. 
+This infusion of resources positions the company to make substantial advancements in the field of humanoid robotics. 
+I am eager to take the next step in my career by transitioning into a leadership role, where I can balance my technical expertise with leadership responsibilities.
+
+\lettersection{Why Me?}
+I possess expertise in motion capture systems, virtual reality, haptics, kinematic retargeting, and dexterous finger control, with a strong foundation in modern C++ for implementing these technologies. 
+My adaptable, generalist skill set and motivation to learn new skills is well-suited for the rapidly evolving field of humanoid robotics, enabling me to effectively respond to and integrate state-of-the-art advancements.
+My experience in designing teleoperation systems for humanoid robots positions me as an ideal candidate to enhance Figure's teleoperation initiatives. 
+
+\end{cvletter}
+
+%-------------------------------------------------------------------------------
+% Print the signature and enclosures with above letter information
+\makeletterclosing
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Eric Wells ~~~·~~~Cover Letter}
+  {\thepage}
+
+\end{document}

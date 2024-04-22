@@ -46,46 +46,11 @@
 
 
 %-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
-%-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
-\name{Eric}{Wells}
-\position{ Robotics Engineer }
-\email{ericwellsrobotics@gmail.com}
-\homepage{www.ericdavidwells.com}
-\github{ericdavidwells}
-\linkedin{ericdavidwells}
-% \gitlab{gitlab-id}
-% \stackoverflow{SO-id}{SO-name}
-% \twitter{@twit}
-% \skype{skype-id}
-% \reddit{reddit-id}
-% \medium{madium-id}
-% \kaggle{kaggle-id}
-% \hackerrank{hackerrank-id}
-% \googlescholar{googlescholar-id}{name-to-display}
-%% \firstname and \lastname will be used
-% \googlescholar{googlescholar-id}{}
-% \extrainfo{extra information}
-
-% \quote{``Be the change that you want to see in the world."}
-
-
-%-------------------------------------------------------------------------------
 \begin{document}
 
-% Print the header with above personal information
-% Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[C]
 
-% Print the footer with 3 arguments(<left>, <center>, <right>)
-% Leave any of these blank if they are not needed
-\makecvfooter
-  {\today}
-  {Eric Wells ~~~·~~~Résumé}
-  {\thepage}
+
+\input{info.tex}
 
 
 %-------------------------------------------------------------------------------
@@ -97,9 +62,17 @@
 \input{resume/honors.tex}
 \input{resume/experience.tex}
 \input{resume/projects.tex}
-\input{resume/computer_skills.tex}
+\input{resume/skills.tex}
 \input{resume/publications.tex}
 \input{resume/volunteering.tex}
-% \input{resume/extracurricular.tex}
+\input{resume/extracurricular.tex}
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Eric Wells ~~~·~~~Résumé}
+  {\thepage}
+
 %-------------------------------------------------------------------------------
 \end{document}
